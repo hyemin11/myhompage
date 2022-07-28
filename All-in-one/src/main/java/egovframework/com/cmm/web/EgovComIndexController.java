@@ -76,7 +76,9 @@ public class EgovComIndexController implements ApplicationContextAware, Initiali
 
 	@RequestMapping("/index.do")
 	public String index(ModelMap model) {
-		return "egovframework/com/cmm/EgovUnitMain";
+		//return "egovframework/com/cmm/EgovUnitMain";
+		return "nuritec/com/cmm/Nri_main_view";
+
 	}
 
 	@RequestMapping("/EgovTop.do")
@@ -123,6 +125,7 @@ public class EgovComIndexController implements ApplicationContextAware, Initiali
 		model.addAttribute("elapsedTimeExpiration", passedDayChangePWD - expirePwdDay);
 
 		return "egovframework/com/cmm/EgovUnitContent";
+
 	}
 
 	@RequestMapping("/EgovLeft.do")

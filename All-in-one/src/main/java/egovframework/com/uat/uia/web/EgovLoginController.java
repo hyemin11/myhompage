@@ -101,6 +101,7 @@ public class EgovLoginController {
 		//권한체크시 에러 페이지 이동
 		String auth_error =  request.getParameter("auth_error") == null ? "" : (String)request.getParameter("auth_error");
 		if(auth_error != null && auth_error.equals("1")){
+
 			return "egovframework/com/cmm/error/accessDenied";
 		}
 
@@ -127,7 +128,7 @@ public class EgovLoginController {
 
 		String message = (String)request.getParameter("loginMessage");
 		if (message!=null) model.addAttribute("loginMessage", message);
-		
+
 		return "egovframework/com/uat/uia/EgovLoginUsr";
 	}
 
@@ -341,6 +342,7 @@ public class EgovLoginController {
 
 		//return "redirect:/egovDevIndex.jsp";
 		return "redirect:/EgovContent.do";
+
 	}
 
 	/**

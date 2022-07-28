@@ -8,7 +8,7 @@
   * @Class Name : EgovUnitContent.jsp
   * @Description : 로그인 성공후 컨텐츠 영역
   * @Modification Information
-  * 
+  *
   * @수정일               수정자            수정내용
   *  ----------   --------   ---------------------------
   *  2020.06.23   신용호            세션만료시간 보여주기
@@ -34,7 +34,7 @@
        color: Black;
 }
 </style>
-<link type="text/css" rel="stylesheet" href="/egovframework-all-in-one/css/egovframework/com/cmm/jqueryui.css">
+<link type="text/css" rel="stylesheet" href="<c:url value='/egovframework-all-in-one/css/egovframework/com/cmm/jqueryui.css'/>">
 <script src="<c:url value='/js/egovframework/com/cmm/jquery.js' />"></script>
 <script src="<c:url value='/js/egovframework/com/cmm/jqueryui.js' />"></script>
 <script type="text/javascript">
@@ -42,7 +42,7 @@
 	var $dialog;
 
     $(document).ready(function () {
-	
+
     	// 파일검색 화면 호출 함수
     	//var page = $(this).attr("href");
         //var pagetitle = $(this).attr("title");
@@ -58,7 +58,7 @@
 				            title: pagetitle,
 				            dialogClass: 'pwdTitleClass'
 				    	});
-        
+
 <c:if test="${loginVO != null}">
 	if ( ${elapsedTimeExpiration} > 0 )
 		$dialog.dialog('open');
